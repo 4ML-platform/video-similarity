@@ -1,0 +1,14 @@
+!Flow
+pods:
+  loader:
+    uses: loader/video_loader.yml
+    parallel: 1
+    read_only: true
+  encoder:
+    uses: encoder/encode.yml
+    parallel: 1
+    read_only: true
+  join_all:
+    uses: _merge
+    needs: [loader, encoder]
+    read_only: true

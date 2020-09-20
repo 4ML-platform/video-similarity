@@ -1,0 +1,6 @@
+!VisilVideoEncoder
+metas:
+  py_modules: video_encoder.py
+  name: encoder
+
+

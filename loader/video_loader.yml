@@ -1,0 +1,14 @@
+!VideoLoader
+metas:
+  name: video_loader
+  py_modules: video_loader.py
+requests:
+  on:
+    [SearchRequest, IndexRequest]:
+      - !CraftDriver
+        with:
+          executor: video_loader
+          method: craft
+    ControlRequest:
+      - !ControlReqDriver {}
+
